@@ -16,7 +16,7 @@ const server = app.listen(port,()=>{
 const wss = new WebSocketServer({server})
 
 wss.on("connection",(ws)=>{
-    ws.on("message",(data)=>{
+    ws.on("message",(data)=>{ 
         console.log(data);
         ws.send("thanks for your req")
     })
